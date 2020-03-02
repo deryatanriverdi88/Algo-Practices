@@ -91,3 +91,26 @@ console.log(calcDeterminant( [ [5,3], [3, 1] ]) )
 // returns => -2 
 //         => -4
 
+
+// FUNCTION - 6
+// Given an object containing the cost price per unit, sell price per unit, and the starting inventory. Return the total profit made, rounded to the nearest dollar. Assume all of the inventory has been sold.
+
+function profit(info){
+  
+  const costPrice = Object.values(info)[0]
+  const sellPrice = Object.values(info)[1]
+  const inventory = Object.values(info)[2]
+  // The Object.values() method returns an array of a given object's own enumerable property values
+  // return of Object.values(info) => [32.67, 45, 1200]
+
+  return Math.round((sellPrice - costPrice) * inventory)
+   // The Math.round() function returns the value of a number rounded to the nearest integer.
+}
+
+console.log(profit({
+    costPrice: 32.67, 
+    sellPrice: 45.00,
+    inventory: 1200
+}))
+
+// returns => 14796
