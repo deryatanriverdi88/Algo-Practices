@@ -242,3 +242,33 @@ function formatDate(date) {
 console.log(formatDate('3/2/2019'))
 
 // returns => 2019/12/11
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// FUNCTION - 11
+// Write a fanction that returns true if a hash contains the specified key, and false otherwise. 
+
+function hasKey(obj, key){
+    console.log(Object.keys(obj), key)
+    if (Object.keys(obj).includes(key)){
+        // The Object.keys() method returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would.
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(hasKey({
+    a: 44, 
+    b: 45, 
+    c: 46
+}, "d"))
+
+console.log(hasKey({
+    pot: 1, 
+    tot: 2, 
+    not:3
+}, "not"))
+
+// returns => false
+//         => true
