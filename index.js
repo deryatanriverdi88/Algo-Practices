@@ -114,3 +114,24 @@ console.log(profit({
 }))
 
 // returns => 14796
+
+
+// FUNCTION - 7
+// Write a function that returns true if two rooks can attack each other, and false otherwise
+// Two rooks can attack each other if they share the same row (letter) or column (number)
+
+function canCapture([yourRook, opponentsRook]){
+    let firstChar = opponentsRook.split("")[0]
+    let secondChar = opponentsRook.split("")[1]
+    if (yourRook.includes(firstChar) || yourRook.includes(secondChar)){
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(canCapture([ "A8" ,  "E8"]))
+console.log(canCapture([ "A1" ,  "B2"]))
+
+// returns => true
+//         => false
