@@ -204,3 +204,25 @@ console.log(numberSyllables('beau-ti-ful'))
 
 //returns => 2
 //        => 3
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// FUNCTION - 9 
+// Create a function that counts the number of adverbs in a sentence. An adverb is a word that ends with ly.
+
+function countAdverbs(sentence) {
+    let count = 0 
+    sentence = sentence.split(" ")
+    sentence.map(word => {
+        if(word.endsWith('ly') || word.endsWith('ly,') || word.endsWith('ly.')) {
+           count++
+        }
+    })
+    return count
+}
+
+console.log(countAdverbs("She ate the lasagna heartily and noisily"))
+console.log(countAdverbs("He was happily, crazily, foolishly over the moon"))
+
+// returns => 2
+//         => 3
