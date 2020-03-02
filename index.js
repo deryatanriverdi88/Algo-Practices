@@ -30,3 +30,12 @@ function afterNMonths(year, months){
 }
 
 console.log(afterNMonths(2009, 24))
+
+
+// Create a function that takes a string and return a string with its letters in alphabethical order.
+
+function AlphabetSoup(str) {
+    return str.split("").sort().join("")
+}
+
+console.log(AlphabetSoup("hello"))
