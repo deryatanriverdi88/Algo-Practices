@@ -327,3 +327,20 @@ function existsHigher(arr, n){
 console.log(existsHigher([5, 3, 15, 22, 4], 10))
 
 // returns => true
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// FUNCTION - 17
+// Create a function which filters out strings from an array and returns a new array containing only integers.
+
+function filterList(list) {
+    const newList = list.filter(item => {
+        return Number.isInteger(item)
+    })
+    return newList
+}
+
+console.log(filterList([1, 2, 3, 'x', 'y', 10]))
+
+// returns => [1, 2, 3, 10]
