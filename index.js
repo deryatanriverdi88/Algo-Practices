@@ -9,6 +9,8 @@ function additiveInverse(arr){
 
 console.log(additiveInverse([-5, 7, -8, -3]))
 
+// returns => [5, -7, 8, 3]
+
 
 // Create a function that takes in year and months as input, then return what yeasr it would be after n-months has elapsed
 // Assume that aading 12 months will always increment the years by 1.
@@ -31,6 +33,8 @@ function afterNMonths(year, months){
 
 console.log(afterNMonths(2009, 24))
 
+// returns => 2011
+
 
 // Create a function that takes a string and return a string with its letters in alphabethical order.
 
@@ -39,3 +43,7 @@ function AlphabetSoup(str) {
 }
 
 console.log(AlphabetSoup("hello"))
+console.log(AlphabetSoup("javascript"))
+
+//returns => ehllo
+//        => aacijprstv
