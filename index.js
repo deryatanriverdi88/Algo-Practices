@@ -309,3 +309,21 @@ function findEvenNums(num){
 console.log(findEvenNums(8))
 
 // returns [2, 4, 6]
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// FUNCTION - 16
+// Write a function that returns true if there exists at least one number that is larger than or equal to n. 
+
+function existsHigher(arr, n){
+  if(Math.max(...arr) >= n){
+      return true 
+  } else {
+      return false
+  }
+} 
+
+console.log(existsHigher([5, 3, 15, 22, 4], 10))
+
+// returns => true
