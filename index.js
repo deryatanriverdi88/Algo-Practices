@@ -207,7 +207,7 @@ console.log(numberSyllables('beau-ti-ful'))
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// FUNCTION - 9 
+// FUNCTION - 10
 // Create a function that counts the number of adverbs in a sentence. An adverb is a word that ends with ly.
 
 function countAdverbs(sentence) {
@@ -226,3 +226,19 @@ console.log(countAdverbs("He was happily, crazily, foolishly over the moon"))
 
 // returns => 2
 //         => 3
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// FUNCTION - 11
+// Create a function that converts a date formatted as MM/DD/YYYY yo YYYY/DD/MM.
+
+function formatDate(date) {
+    date = date.split("/")
+    const year = date.pop() // pop method will take the last item of an array, and mutate the orginal array. 
+    const day = date.pop()
+    return year + "/" + day + "/" + date // after two pop methods, only month left in date. 
+}
+
+console.log(formatDate('3/2/2019'))
+
+// returns => 2019/12/11
