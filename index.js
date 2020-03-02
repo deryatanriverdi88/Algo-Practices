@@ -191,3 +191,16 @@ console.log(checkEnding("feminine", "nine"))
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// FUNCTION - 9 
+// Create a function that counts the number of syllables a word has. Each syllable is seperated with a dash (-)
+
+function numberSyllables(word){
+    let wordArr = word.split("-")
+    return wordArr.length
+}
+
+console.log(numberSyllables('buf-fet'))
+console.log(numberSyllables('beau-ti-ful'))
+
+//returns => 2
+//        => 3
