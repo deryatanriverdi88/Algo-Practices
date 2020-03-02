@@ -47,3 +47,22 @@ console.log(AlphabetSoup("javascript"))
 
 //returns => ehllo
 //        => aacijprstv
+
+// Write a method that checks if two numbers are: 
+//     - Smaller than 0
+//     - Greater than 0 
+//     - Exactly 0
+
+function both (n1, n2) {
+    if(n1 > 0 & n2 > 0 || n1 < 0 & n2 < 0  || n1 === 0 & n2 === 0 ){
+        return true
+    }else {
+        return false
+    }
+}
+
+console.log(both(6,2))
+console.log(both(6,-2))
+
+// returns => true
+//         => false
