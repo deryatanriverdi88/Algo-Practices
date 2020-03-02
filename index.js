@@ -135,3 +135,26 @@ console.log(canCapture([ "A1" ,  "B2"]))
 
 // returns => true
 //         => false
+
+
+// FUNCTION - 8
+// write a function that returns true if all integers in an array are factors of a number, and false otherwise.
+
+function checkFactors(factors, num){
+  const isTrue = factors.filter(n => {
+      return num % n === 0
+      // filter method will return a new array with objects that passed the condition
+  })
+  if(isTrue.length === factors.length){
+      // if the new array that is created by filter method has a same length as orginal array, that means every object in orginal array passes the condition.
+      return true
+  } else {
+      return false
+  }
+}
+
+console.log(checkFactors([2,3,4], 12))
+console.log(checkFactors([1,2,3,8], 12))
+
+// returns => true
+//         => false
