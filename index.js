@@ -272,3 +272,19 @@ console.log(hasKey({
 
 // returns => false
 //         => true
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// FUNCTION - 11
+// Create a function that takes an array of numbers and returns only the even numbers.
+
+function noOdds(arr) {
+    const newArr = arr.filter(num => {
+        return num % 2 === 0
+    })
+    return newArr
+}
+
+console.log(noOdds([1,2,3,4,5,6,7,8]))
+
+// returns => [2,4,6,8]
