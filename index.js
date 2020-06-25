@@ -374,3 +374,19 @@ function miniMaxSum(arr) {
 miniMaxSum([1, 2, 3, 4, 5])
 miniMaxSum([5, 2, 4, 4, 5])
 miniMaxSum([5, 5, 5, 5, 5])
+
+// FUNCTION - 19
+// You are in charge of the cake for your niece's birthday and have decided the cake will have one candle for each year of her total age. When she blows out the candles, she’ll only be able to blow out the tallest ones. Your task is to find out how many candles she can successfully blow out.
+
+function birthdayCakeCandles(ar) {
+    let maxNum = Math.max(...ar)
+    let blownedCandles = 0
+    for(let i =0; i < ar.length; i++){
+        if(ar[i] === maxNum){
+            blownedCandles += 1
+        }
+    }
+    return blownedCandles
+}
+
+birthdayCakeCandles([3,2,3,4])
