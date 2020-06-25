@@ -345,7 +345,7 @@ console.log(filterList([1, 2, 3, 'x', 'y', 10]))
 
 // returns => [1, 2, 3, 10]
 
-// FUNCTION - 17
+// FUNCTION - 18
 // Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
 function miniMaxSum(arr) {
     let minNum = Math.min(...arr)
@@ -374,3 +374,19 @@ function miniMaxSum(arr) {
 miniMaxSum([1, 2, 3, 4, 5])
 miniMaxSum([5, 2, 4, 4, 5])
 miniMaxSum([5, 5, 5, 5, 5])
+
+// FUNCTION - 19
+// You are in charge of the cake for your niece's birthday and have decided the cake will have one candle for each year of her total age. When she blows out the candles, she’ll only be able to blow out the tallest ones. Your task is to find out how many candles she can successfully blow out.
+
+function birthdayCakeCandles(ar) {
+    let maxNum = Math.max(...ar)
+    let blownedCandles = 0
+    for(let i =0; i < ar.length; i++){
+        if(ar[i] === maxNum){
+            blownedCandles += 1
+        }
+    }
+    return blownedCandles
+}
+
+birthdayCakeCandles([3,2,3,4])
