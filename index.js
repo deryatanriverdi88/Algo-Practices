@@ -344,3 +344,33 @@ function filterList(list) {
 console.log(filterList([1, 2, 3, 'x', 'y', 10]))
 
 // returns => [1, 2, 3, 10]
+
+// FUNCTION - 17
+// Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+function miniMaxSum(arr) {
+    let minNum = Math.min(...arr)
+    let maxNum = Math.max(...arr)
+    let totalWithoutMax = 0
+    let totalWithoutMin = 0
+
+    for(let i= 0; i < arr.length; i++){
+        if(arr[i] !== maxNum){
+            totalWithoutMin = totalWithoutMin + arr[i]
+        }else if (arr[i] === maxNum){
+            maxNum = null
+        }
+    }
+
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] !== minNum){
+            totalWithoutMax = totalWithoutMax + arr[i]
+        }else if (arr[i] === minNum){
+            minNum = null
+        }
+    }
+    console.log(totalWithoutMin, totalWithoutMax)
+}
+
+miniMaxSum([1, 2, 3, 4, 5])
+miniMaxSum([5, 2, 4, 4, 5])
+miniMaxSum([5, 5, 5, 5, 5])
