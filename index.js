@@ -440,3 +440,23 @@ function twoArrays(k, A, B) {
 }
 
 twoArrays(94, [84, 2, 50, 51, 19, 58, 12, 90, 81, 68, 54, 73, 81, 31, 79, 85, 39, 2], [53 ,102, 40, 17, 33, 92, 18, 79, 66, 23, 84, 25, 38, 43, 27, 55, 8, 19])
+
+// FUNCTION - 22
+// Complete the minimumAbsoluteDifference function in the editor below. It should return an integer that represents the minimum absolute difference between any pair of elements.
+
+function minimumAbsoluteDifference(arr) {
+    arr = arr.sort((a, b) => a - b);
+    let min = Math.abs(arr[0] - arr[1]);
+    let diff;
+
+    for(let i = 2; i < arr.length; i++) {
+        diff = Math.abs(arr[i] - arr[i-1]);
+        console.log("min :" , min )
+        console.log("current number: ", arr[i], arr[i-1])
+        console.log("differ : ", diff)
+        if(diff < min) {
+            min = diff;
+        }
+    }
+    return min;
+}
