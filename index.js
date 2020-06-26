@@ -415,3 +415,28 @@ function timeConversion(s) {
        return s.replace("AM", "")
     }
 }
+
+// FUNCTION - 21
+// For each query, print YES on a new line if valid permutations exist. Otherwise, print NO.
+function twoArrays(k, A, B) {
+    A = A.sort((a, b) => a - b)
+    B = B.sort((a, b) => b - a)
+    let result = []
+   console.log(A)
+   console.log(B)
+    for (let i = 0; i < A.length && i < B.length; i++){
+        if( A[i] + B[i] >= k){
+            result.push("Y")
+        } else {
+          null
+        }
+    }
+     console.log(result)
+    if(A.length === result.length){
+        return "YES"
+    }else{
+        return "NO"
+    }
+}
+
+twoArrays(94, [84, 2, 50, 51, 19, 58, 12, 90, 81, 68, 54, 73, 81, 31, 79, 85, 39, 2], [53 ,102, 40, 17, 33, 92, 18, 79, 66, 23, 84, 25, 38, 43, 27, 55, 8, 19])
