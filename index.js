@@ -460,3 +460,48 @@ function minimumAbsoluteDifference(arr) {
     }
     return min;
 }
+
+// FUNCTION - 23
+
+function gradingStudents(grades) {
+    // Write your code here
+    let newGrades = []
+    for(let i = 0; i < grades.length; i++){
+    if((grades[i] + 2) % 5 === 0 && grades[i] >= 38 ){
+        newGrades.push(grades[i] + 2)
+    }
+    else if((grades[i] + 1) % 5 === 0 && grades[i] >= 38){
+       newGrades.push(grades[i] + 1)
+    }
+    else {
+        newGrades.push(grades[i])
+    }
+  }
+  return newGrades
+}
+
+// FUNCTION - 24
+// Maria plays college basketball and wants to go pro. Each season she maintains a record of her play. She tabulates the number of times she breaks her season record for most points and least points in a game. Points scored in the first game establish her record for the season, and she begins counting from there.
+
+function breakingRecords(scores) {
+    let worstScore = scores[0]
+    let bestScore = scores[0]
+
+    let timesOfWorst = 0
+    let timesOfBest = 0
+    console.log(scores)
+    for(let i = 1; i < scores.length; i++){
+      if(scores[i] < worstScore){
+         console.log(`${scores[i]} is less then ${worstScore}`,)
+          worstScore = scores[i]
+          timesOfWorst += 1
+          console.log("worst =>", timesOfWorst)
+      } else if(scores[i] > bestScore){
+          console.log(`${scores[i]} is bigger then ${bestScore}`)
+          bestScore = scores[i]
+           timesOfBest += 1
+          console.log("best =>", timesOfBest)
+      }
+    }
+   return `${timesOfBest} ${timesOfWorst}`
+}
