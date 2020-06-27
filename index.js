@@ -460,3 +460,22 @@ function minimumAbsoluteDifference(arr) {
     }
     return min;
 }
+
+// FUNCTION - 23
+
+function gradingStudents(grades) {
+    // Write your code here
+    let newGrades = []
+    for(let i = 0; i < grades.length; i++){
+    if((grades[i] + 2) % 5 === 0 && grades[i] >= 38 ){
+        newGrades.push(grades[i] + 2)
+    }
+    else if((grades[i] + 1) % 5 === 0 && grades[i] >= 38){
+       newGrades.push(grades[i] + 1)
+    }
+    else {
+        newGrades.push(grades[i])
+    }
+  }
+  return newGrades
+}
