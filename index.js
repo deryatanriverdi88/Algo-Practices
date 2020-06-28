@@ -528,9 +528,9 @@ function birthday(s, d, m) {
             console.log(square)
         }
         if(square.length > 0){
-        if((square.reduce((a,b)=> a+b)) === d){
-                  amountOfGivenChocolate += 1
-        }
+            if((square.reduce((a,b)=> a+b)) === d){
+                    amountOfGivenChocolate += 1
+            }
       }
     }
     return amountOfGivenChocolate
