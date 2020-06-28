@@ -535,3 +535,19 @@ function birthday(s, d, m) {
     }
     return amountOfGivenChocolate
 }
+
+// FUNCTION - 26
+
+function divisibleSumPairs(n, k, ar) {
+    let amountOfDivisibleByThree = 0
+    for(let i = 0; i < ar.length; i++){
+        for (let j=1; j < ar.length - i; j++){
+            console.log(ar[i], ar[j+i])
+            if((ar[i] + ar[j+i]) % k === 0){
+            console.log("passed", `${ar[i]} + ${ar[j+i]}`)
+              amountOfDivisibleByThree += 1
+            }
+        }
+    }
+    return amountOfDivisibleByThree
+}
