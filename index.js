@@ -505,3 +505,33 @@ function breakingRecords(scores) {
     }
    return `${timesOfBest} ${timesOfWorst}`
 }
+
+// FUNCTION -25
+// Lily has a chocolate bar that she wants to share it with Ron for his birthday. Each of the squares has an integer on it. She decides to share a contiguous segment of the bar selected such that the length of the segment matches Ron's birth month and the sum of the integers on the squares is equal to his birth day. You must determine how many ways she can divide the chocolate.
+
+function birthday(s, d, m) {
+    let amountOfGivenChocolate = 0
+    let square = []
+    for(let i=0; i < s.length; i++){
+        square = []
+        // console.log('first loop', s[i])
+        if(s.length === 1){
+            if(s[i] === d){
+               amountOfGivenChocolate +=1
+            }
+        }else if(s.length > 1) {
+            square.push(s[i])
+            for(let j=1; j< m; j++){
+            console.log("second loop")
+            square.push(s[j+i])
+         }
+            console.log(square)
+        }
+        if(square.length > 0){
+        if((square.reduce((a,b)=> a+b)) === d){
+                  amountOfGivenChocolate += 1
+        }
+      }
+    }
+    return amountOfGivenChocolate
+}
