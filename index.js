@@ -551,3 +551,53 @@ function divisibleSumPairs(k, ar) {
     }
     return amountOfDivisibleByThree
 }
+
+
+
+// FUNCTION - 27
+
+function migratoryBirds(arr) {
+    let sortedArr = arr.sort((a,b) => a - b)
+    let dublicates = []
+    let result = {}
+    // console.log("sorted array", sortedArr)
+    let sum = 0
+    for(let i = 0; i < sortedArr.length; i++){
+        // console.log(sortedArr[i], sortedArr[i+1])
+        if(sortedArr[i] === sortedArr[i+1] && !dublicates.includes(sortedArr[i])){
+            dublicates.push(sortedArr[i])
+            sum = 0
+            sum = 1
+            // console.log("first condition =>", sum)
+            result[sortedArr[i]] = sum
+        } else if(sortedArr[i] === sortedArr[i+1] ||dublicates.includes(sortedArr[i])){
+            dublicates.push(sortedArr[i])
+            sum += 1
+            // console.log("second condition =>", sum)
+            result[sortedArr[i]] = sum
+        }else {
+            sum = 0
+            // console.log("third condition =>", sum)
+        }
+    }
+    // console.log(dublicates)
+    // console.log(result)
+
+    const getMax = object => {
+        return Object.keys(object).filter(x => {
+             return object[x] == Math.max.apply(null,
+             Object.values(object));
+       });
+    };
+
+    // console.log(getMax(result))
+
+    let minNum = getMax(result).map((item) => {
+       return  Number(item)
+    })
+    // console.log(minNum)
+    minNum = Math.min(...minNum)
+    return minNum
+}
+
+migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4])
