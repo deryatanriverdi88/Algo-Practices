@@ -601,3 +601,20 @@ function migratoryBirds(arr) {
 }
 
 migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4])
+
+// FUNCTION - 28
+
+function bonAppetit(bill, k, b) {
+    let billCantBeShared = bill.splice(k, 1)
+    let total = (bill.reduce((a, b) => a +b)) / 2
+    let statement;
+    if(b === total){
+        statement = "Bon Appetit"
+    }
+    else{
+        statement = b - total
+    }
+    return statement
+}
+
+bonAppetit([3, 10, 2, 9], 1, 11)
