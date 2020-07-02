@@ -538,7 +538,7 @@ function birthday(s, d, m) {
 
 // FUNCTION - 26
 
-function divisibleSumPairs(n, k, ar) {
+function divisibleSumPairs(k, ar) {
     let amountOfDivisibleByThree = 0
     for(let i = 0; i < ar.length; i++){
         for (let j=1; j < ar.length - i; j++){
