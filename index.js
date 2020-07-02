@@ -618,3 +618,25 @@ function bonAppetit(bill, k, b) {
 }
 
 bonAppetit([3, 10, 2, 9], 1, 11)
+
+// FUNCTION - 29
+
+function sockMerchant(n, ar) {
+    ar = ar.sort((a,b)=> a -b)
+    let count = 0
+    let i = 0
+    console.log(ar)
+    while (i < n){
+        if(ar[i] === ar[i+1]){
+            count += 1
+            i += 2
+            console.log("if" , i)
+        } else {
+            i += 1
+            console.log("else", i)
+        }
+    }
+    return count
+}
+
+sockMerchant(9,[10, 20, 20, 10, 10, 30, 50, 10, 20])
